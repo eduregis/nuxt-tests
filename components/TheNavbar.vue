@@ -6,6 +6,9 @@
       </nuxt-link>
       <span class="subheader">A Vue School course</span>
     </div>
+    <div>
+      aaaa
+    </div>
   </nav>
 </template>
 
@@ -15,7 +18,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   nav {
     display: flex;
     justify-content: space-between;
@@ -23,28 +26,31 @@ export default {
     margin-bottom: 70px;
     font-weight: lighter;
     letter-spacing: 0.5px;
+    .logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .subheader {
+        opacity: 0.70;
+        font-size: 0.9rem;
+        color: white;
+      }
+    }
+    .nav-content {
+      font-size: 1rem;
+      ul {
+        display: flex;
+        list-style: none;
+        li {
+          padding: 2px 10px;
+          &:not(:first-of-type) {
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+          }
+        }
+        
+      }    
+    } 
   }
-  .nav .logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .nav .logo .subheader {
-    opacity: 0.70;
-    font-size: 0.9rem;
-    color: white;
-  }
-  .nav .nav-content {
-    font-size: 1rem;
-  }
-  .nav-content ul {
-    display: flex;
-    list-style: none;
-  }
-  .nav-content ul li {
-    padding: 2px 10px;
-  }
-  .nav-content ul li:not(:first-of-type) {
-    border-left: 1px solid rgb(255, 255, 255, 0.2);
-  }
+  
+  
 </style>
