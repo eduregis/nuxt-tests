@@ -11,15 +11,14 @@
 
 <script>
 import TheNavbar from '@/components/TheNavbar.vue'
+import { mapState } from 'vuex'
 export default {
   components: {
     TheNavbar
   },
-  data(){
-    return {
-      dark: true
-    }
-  }
+  computed: mapState({
+    dark: state => state.general.dark
+  }),
 }
 </script>
 

@@ -1,22 +1,27 @@
 $navy: #112F41;
 $white: #fdfdfd;
+$grey: #35495e;
 $teal: #068587;
 $teal-light: #4FB99F;
+$teal-dark: #3b8070;
 $yellow: #F2B134;
 $main-bg-color: coral;
 
 $color-bg: 'color-bg';
 $color-text: 'color-text';
+$color-btn: 'color-btn';
 
 $themes: (
   light: (
     color-bg: $white,
     color-text: $navy,
+    color-btn: $grey
 
   ),
   dark: (
     color-bg: $navy,
     color-text: $white,
+    color-btn: $teal-dark
   )
 );
 

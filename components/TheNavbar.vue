@@ -6,7 +6,7 @@
       </nuxt-link>
       <span class="subheader">A Vue School course</span>
     </div>
-    <div>
+    <div @click="$store.commit('general/toggleDark')" class="button--default">
       aaaa
     </div>
   </nav>
@@ -14,6 +14,11 @@
 
 <script>
 export default {
+  data(){
+    return {
+      dark: this.$store.state.general.dark
+    }
+  },
 
 }
 </script>
@@ -32,8 +37,7 @@ export default {
       justify-content: center;
       .subheader {
         opacity: 0.70;
-        font-size: 0.9rem;
-        color: white;
+        font-size: 0.9rem;       
       }
     }
     .nav-content {

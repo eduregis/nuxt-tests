@@ -14,7 +14,7 @@
           v-for="post in posts"
           :to="{name: 'posts-id', params: {id: post.id}}"
           :key="post.id"
-          class="button--grey">
+          class="button--default">
           {{ post.title }}
         </nuxt-link>
       </div>
@@ -27,6 +27,11 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+   data(){
+    return {
+      dark: this.$store.state.general.dark
+    }
   },
   head() {
     return{      
